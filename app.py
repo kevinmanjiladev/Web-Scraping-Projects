@@ -97,7 +97,7 @@ def scrape_alibaba(search):
 
 
 
-# STREAMLIT UI PART
+# STREAMLIT UI PART CODE
 st.title("Alibaba Scraper")
 
 search = st.text_input("Enter product to search (example: laptop):")
