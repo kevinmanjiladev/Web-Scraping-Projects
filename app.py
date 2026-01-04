@@ -22,6 +22,7 @@ def scrape_alibaba(search):
     countries = []
     suppliers = []
     response_rates = []
+    reviews=[]
 
     for p in products:
 
@@ -54,6 +55,13 @@ def scrape_alibaba(search):
             supplier = p.find_element(By.CSS_SELECTOR, '.search-card-e-company').text
         except:
             supplier = "N/A"
+        
+        try:
+            review = p.find_element(By.CSS_SELECTOR, '.search-card-e-review span').text
+        except:
+            review = "N/A"
+ 
+        
 
         # RESPONSE RATE (this appears only sometimes)
         # try:
@@ -67,6 +75,7 @@ def scrape_alibaba(search):
         moqs.append(moq)
         countries.append(country)
         suppliers.append(supplier)
+        reviews.append(review)
         # response_rates.append(response_rate)
 
     driver.quit()
@@ -77,6 +86,7 @@ def scrape_alibaba(search):
         "Min Order": moqs,
         "Supplier Country": countries,
         "Supplier Name": suppliers,
+        "Reviews": reviews
         # "Response Rate": response_rates
     })
 
