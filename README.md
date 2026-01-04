@@ -1,26 +1,21 @@
 🛒 Alibaba Product Scraper (Streamlit + Selenium)
-
+--------------------------------------------------
 This project is a web scraping application built with Streamlit and Selenium to extract product details from Alibaba.com.
 Users can enter a product name (e.g., laptop, smartwatch, camera), and the app automatically opens a browser, scrapes product information, and displays it in a structured table.
 
 
 🚀 Features
-
+--------------
 🔍 Search any product on Alibaba
 
 🖥️ Automated browser scraping using Selenium
 
 📦 Extracts:
-
-Product Title
-
-Price
-
-Minimum Order (MOQ)
-
-Supplier Country
-
-Supplier Name
+    >Product Title
+    >Price
+    >Minimum Order (MOQ)
+    >Supplier Country
+    >Supplier Name
 
 📊 Displays results in an interactive Streamlit table
 
@@ -31,6 +26,7 @@ Supplier Name
 
 
 🧰 Tech Stack
+---------------
 
 | Component       | Technology                           |
 | --------------- | ------------------------------------ |
@@ -56,5 +52,6 @@ pip install -r requirements.txt
 pip freeze > requirements.txt*)
 
 ▶️ How to Run
+---------------
 Run the Streamlit app using:
 streamlit run app.py
